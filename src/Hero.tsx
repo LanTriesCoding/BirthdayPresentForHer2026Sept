@@ -7,7 +7,7 @@ export function Hero() {
         <section className="hero">
             <p className="hero-kicker">A special morning, made for you</p>
             <h1 className="heroTitle">Happy Birthday, My Love</h1>
-            <p className="hero-sub">Hope you found this website on a wonderful morning!</p>
+            <p className="hero-sub">You can pick one of these or just scroll down!</p>
             <nav className="hero-image-actions" aria-label="Birthday page sections">
                 <a className="hero-image-button" href="#letter" aria-label="Open birthday letter" title="Open birthday letter">
                     <img src={birthdayLetterButton} alt="Birthday letter" />

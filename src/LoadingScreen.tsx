@@ -6,11 +6,11 @@ type LoadingMode = 'startup' | 'transition'
 
 const loadingMessages = [
   'Remember to drink water, baby!',
-  'Take a short break!',
-  'Are you excited to see what\'s next? ;)',
+  'Take a short break here!',
+  'Wonder whats next ;)',
 ]
 
-const startupMessages = ['preparing...', 'waking up my memory...', 'wrapping up the gift...']
+const startupMessages = ['thinking...', 'waking up my memory...', 'wrapping up the gift...']
 
 export function LoadingScreen({ mode }: { mode: LoadingMode }) {
   const isStartup = mode === 'startup'
@@ -23,7 +23,7 @@ export function LoadingScreen({ mode }: { mode: LoadingMode }) {
         </>
       ) : <img className="loading-photo loading-photo-center" src={loadingImage} alt="" />}
       <div className="loading-copy">
-        <p className="loading-kicker">{isStartup ? 'A tiny birthday quest' : 'One moment, love'}</p>
+        <p className="loading-kicker">{isStartup ? 'Lovely bear, be patient~' : 'One moment, love'}</p>
         <div className="loading-lines" aria-live="polite">
           {isStartup ? <AlternatingStartupMessage /> : <AlternatingMessage />}
         </div>
