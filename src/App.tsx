@@ -35,7 +35,7 @@ function BirthdayHome() {
   const visit = Number(localStorage.getItem('birthday-visit-count') ?? 1)
   const birthdayWishes = [
     'May you always feel as loved as you make everyone around you feel ><',
-    'May this new chapter be full of more opportunities and absolute wins for a baddie like you!!!',
+    'May this new chapter be full of more opportunities and new wins for a baddie like you!!!',
     'May this year be gentle, golden, and completely yours to own!',
     'May every little dream and wish you make find its swiftest way to you this year~',
     'May this year bring you more laughter, rest, and wonder! :D',
@@ -58,11 +58,11 @@ function BirthdayHome() {
         <p className="signature">With my everything, always</p>
       </section>
       <section className="memories-section" id="memories">
-        <div className="section-heading"><p className="eyebrow">Thank you for choosing to be together</p><h2>Three things I *think* I learnt about you within the past year</h2></div>
+        <div className="section-heading"><p className="eyebrow">Thank you for choosing to be together</p><h2>Please talk about yourself more, my lovely person...</h2></div>
         <div className="memory-grid">
-          <article className="memory-card"><span>01</span><h3>Your emphatic heart</h3><p>I still remember the talk we had about how you took care of your grandma.</p></article>
-          <article className="memory-card"><span>02</span><h3>Your mature spirit</h3><p>I tend to forget that you're the older one in the relationship. You keep choosing growth, wonder, and the next beautiful thing.</p></article>
-          <article className="memory-card"><span>03</span><h3>Your gorgesdiufsoiufsoi smile</h3><p>It is easily one of my top 10 favorite sounds in the world, of course the first is gotta be my King Fool's Gold. But we aint here to talk about pixels. Not on a day where you only are the spotlight and my main protragonist on this stage.</p></article>
+          <article className="memory-card"><span>01</span><h3>Your emphatic heart</h3><p>I still remember the talk we had about how you took care of your grandma, or was it your aunt? I think back to it from time to time, and admire your dedication to care-taking, your will to keep pushing despite all the negative things your environment throws at you. It genuinely shines light on how big of a person you are, and I just cant stop admiring that about you. You truly are a gem, one of a kind, and I dont ever want you to forget all the good things youve done so far in your life, baby. Whenever you feel lost in touch with yourself, remember that, because you are you and because of who you choose to be as a person, you will be welcomed anywhere you go. Trust my word on this. And when the environment is unkind and doesnt respond to your kindness, always remind yourself that they arent gonna be here forever - you wont be there forever. Eveyrthing will get better from this birthday onward. I can just tell. So, celebrate proudly and fully on this special day! You are a survivor!</p></article>
+          <article className="memory-card"><span>02</span><h3>Your mature spirit</h3><p>I tend to forget that you're the older one in the relationship. But being older doesnt mean you have to shoulder every responsibility on earth. Only the amount that a normal person can handle is healthy! So, when you feel weighted down by the crushing thoughts that are imposed on you by the unhelpful environment, when you feel that being an adult is too much for you, remember that youll always be my BABY first and foremost. And when we are both tired? Hell yeah we will baby each other, lmao giggles and kicks feet. Anyway... I want to say that I respect you from the bottom of my heart - as another person, as a lover, and as someone younger. We are together in this life. And I will never ever grow tired of you! Mwah.</p></article>
+          <article className="memory-card"><span>03</span><h3>Your gorgesdiufsoiufsoi smile and laugh... GIGGLES</h3><p>It is easily one of my top 10 favorite sounds in the world, of course the first is gotta be my King Fool's Gold. But we aint here to talk about pixels. Not on a day where you only are the spotlight and my main protragonist on this stage. crine. Anyway, I'm pretty certain that I would've said this during our real-time conversation on this special day, but just in case I forget I'm going to say it here that, I love you... And I love being the reason for your smiles, giggles and laughs. Hope you laugh and giggle a lot on this special day and everyday from here on out!</p></article>
         </div>
       </section>
       <section className="wish-section" id="wish">
