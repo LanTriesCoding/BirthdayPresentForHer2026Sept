@@ -149,7 +149,7 @@ export function QuizGate({ onComplete }: { onComplete: () => void }) {
     <main className="quiz-page">
       <div className="quiz-topline"><span>For you, always</span><span>{String(current + 1).padStart(2, '0')} / 05</span></div>
       <div className="quiz-content">
-        <p className="hero-kicker">Welcome back, birthday girl</p>
+        <p className="hero-kicker">Welcome~ 9/6/2026</p>
         {/* <h1>Hehe...</h1> */}
         <p className="quiz-prompt">{question.prompt}</p>
         <div className="quiz-options">{question.options.map((option, index) => selected === index ? <p className="quiz-reply" key={option}>{question.replies[index]}</p> : <button className={selected !== null ? 'faded' : ''} disabled={selected !== null} type="button" key={option} onClick={() => choose(index)}>{option}<span aria-hidden="true">↗</span></button>)}</div>
