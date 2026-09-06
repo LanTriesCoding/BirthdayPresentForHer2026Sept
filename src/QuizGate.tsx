@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 type Question = { prompt: string; options: string[]; replies: string[]; answer: number }
 
@@ -114,20 +114,27 @@ const questionSets: Question[][] = [
       replies: ['So you picked the OG option... Excellent taste... Now, how would you like to pack me? Would you keep me inside your pockets? Or on top your head? Maybe, on your shoulders? I\'d love to stay close to your face on your shoulder so that I can land so many kisses anytime >:) Im evil...', 'Soft, sweet, and simple. Enough for a good snack every morning heh.', 'The only strongest, most accurate option out of three. Mwah. I love you. Trust me, babygorl. We da best survivors in da wild. Idv literally prepared us for ts. (crine) Anyway, Happy Birthday, lovely girl <33'], answer: 3
     },
     {
-      prompt: 'Please dont gooo yet!!! Stay a bit longer to vibe with the songs!!! :((',
-      options: ['OKAY!! I\'m staying here!!', 'Your laugh', 'The whole package'],
-      replies: ['Your kindness changes the room.', 'Your laugh is still one of my favorite sounds.', 'Correct. The whole package is pretty extraordinary.'], answer: 2
+      prompt: 'Please dont gooo yet! Stay a bit longer to vibe with the songs! :(',
+      options: ['OKAY!! I\'m staying here!!', 'I guess I will stay here... *reluctantly', 'NAH I NEED TO GET TO THE MAIN COURSE.'],
+      replies: ['The only correct option...', '...Getting the sharks ready to attack you ...In 3... 2... 1...', 'Alright then! :D'], answer: 2
     },
   ],
 ]
 
 export function QuizGate({ onComplete }: { onComplete: () => void }) {
-  const [visit] = useState(() => {
-    const nextVisit = Number(localStorage.getItem('birthday-visit-count') ?? 0) + 1
-    localStorage.setItem('birthday-visit-count', String(nextVisit))
-    return nextVisit
-  })
-  const questions = questionSets[(visit - 1) % questionSets.length]
+  const hasRegisteredVisit = useRef(false)
+  const [visit, setVisit] = useState<number | null>(null)
+
+  useEffect(() => {
+    if (hasRegisteredVisit.current) return
+    hasRegisteredVisit.current = true
+
+    const nextVisit = Number(sessionStorage.getItem('birthday-visit-count') ?? 0) + 1
+    sessionStorage.setItem('birthday-visit-count', String(nextVisit))
+    setVisit(nextVisit)
+  }, [])
+
+  const questions = questionSets[((visit ?? 1) - 1) % questionSets.length]
   const [current, setCurrent] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)
 
@@ -144,10 +151,12 @@ export function QuizGate({ onComplete }: { onComplete: () => void }) {
     }
   }
 
+  if (visit === null) return null
+
   const question = questions[current]
   return (
     <main className="quiz-page">
-      <div className="quiz-topline"><span>For you, always</span><span>{String(current + 1).padStart(2, '0')} / 05</span></div>
+      <div className="quiz-topline"><span>For you, always</span><span>{String(current + 1).padStart(2, '0')} / 04 or 05</span></div>
       <div className="quiz-content">
         <p className="hero-kicker">Welcome~ 9/6/2026</p>
         {/* <h1>Hehe...</h1> */}

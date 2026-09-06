@@ -76,11 +76,11 @@
 .quiz-next:hover:not(:disabled), .quiz-next:focus-visible:not(:disabled) { background: transparent; color: var(--cream); transform: translateX(4px); }
 .quiz-next:disabled { border-color: rgba(255, 246, 231, .3); background: transparent; color: rgba(255, 246, 231, .35); cursor: not-allowed; }
 .quiz-footnote { color: var(--peach); font-size: 10px; margin: 24px 0 0; }
-.music-player { position: fixed; z-index: 10; right: 22px; bottom: 20px; display: flex; align-items: center; gap: 10px; color: var(--cream); font-size: 10px; }
+.music-player { position: fixed; z-index: 10; left: 22px; bottom: 20px; display: flex; align-items: center; gap: 10px; color: var(--cream); font-size: 10px; }
 .music-player button { border: 1px solid rgba(255, 246, 231, .65); background: var(--coral); color: var(--cream); padding: 8px 10px; cursor: pointer; font: inherit; }
 .music-player button:hover, .music-player button:focus-visible { background: var(--cream); color: var(--coral); }
 @media (max-width: 480px) {
-  .music-player { right: 14px; bottom: 14px; }
+  .music-player { left: 14px; bottom: 14px; }
   .music-player span { display: none; }
 }
 .hero {

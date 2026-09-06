@@ -32,7 +32,7 @@ function App() {
 }
 
 function BirthdayHome() {
-  const visit = Number(localStorage.getItem('birthday-visit-count') ?? 1)
+  const visit = Number(sessionStorage.getItem('birthday-visit-count') ?? 1)
   const birthdayWishes = [
     'May you always feel as loved as you make everyone around you feel ><',
     'May this new chapter be full of more opportunities and new wins for a baddie like you!!!',
